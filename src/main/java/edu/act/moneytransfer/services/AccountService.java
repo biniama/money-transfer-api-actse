@@ -2,8 +2,11 @@ package edu.act.moneytransfer.services;
 
 import edu.act.moneytransfer.domains.Account;
 import edu.act.moneytransfer.repositories.AccountRepository;
+import edu.act.moneytransfer.utils.AgeCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 
 @Service
 public class AccountService {
@@ -25,7 +28,15 @@ public class AccountService {
 
     public Account createAccount(Account account) {
 
-       return accountRepository.save(account);
+        // validation
+        int age = AgeCalculator.calculateAge(account.getDateOfBirth(), LocalDate.now());
+
+        if (age > 15) {
+            return accountRepository.save(account);
+        } else {
+            System.out.println("Sorry. User under the age of 15 years cannot register.");
+            return null;
+        }
     }
 
     public Iterable<Account> allAccounts() {

@@ -1,0 +1,16 @@
+### CREATE ACCOUNT
+POST http://localhost:8080/api/account/create
+Content-Type: application/json
+
+{
+  "firstName": "Jane2",
+  "middleName": "G.2",
+  "lastName": "Doe2",
+  "phoneNumber": "+1898882822",
+  "email": "janedoe2@gmail.com",
+  "dateOfBirth": "2000-01-01",
+  "pin": 233222
+}
+
+### LIST ALL ACCOUNTS
+GET http://localhost:8080/api/account/list
