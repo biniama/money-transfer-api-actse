@@ -10,7 +10,7 @@
     </parent>
     <groupId>edu.act</groupId>
     <artifactId>money-transfer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>money-transfer-api-actse</name>
     <description>This is money transfer application.</description>
     <properties>

@@ -1,15 +1,15 @@
 ### CREATE ACCOUNT
-POST http://localhost:8080/api/account/create
+POST https://money-transfer-api-actse.herokuapp.com/api/account/create
 Content-Type: application/json
 
 {
-  "firstName": "Jane2",
-  "middleName": "G.2",
-  "lastName": "Doe2",
+  "firstName": "Biniam",
+  "middleName": "Asnake",
+  "lastName": "Kefale",
   "phoneNumber": "+1898882822",
-  "email": "janedoe2@gmail.com",
-  "dateOfBirth": "2000-01-01",
-  "pin": 233222
+  "email": "biniamasnake@gmail.com",
+  "dateOfBirth": "1988-01-01",
+  "pin": 1234
 }
 
 ### LIST ALL ACCOUNTS
