@@ -1,4 +1,6 @@
 spring:
+#  profiles:
+#    active: development
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/moneytransfer
@@ -14,3 +16,23 @@ spring:
     # Optional
     properties:
       hibernate: org.hibernate.dialect.PostgreSQLDialect
+
+#---
+#spring:
+#  profiles:
+#    active: production
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://ec2-34-249-247-7.eu-west-1.compute.amazonaws.com:5432/dd4isifpvn3p92
+#    username: ztpnuytrpzzart
+#    password: 03a89da6ec488384e2506d7e8050f55f612d7237f4ba3cb5c9684438bb045c11
+#  sql:
+#    init:
+#      mode: always
+#  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#      ddl-auto: update  # create table if it doesn't exist. If it exists and if there is any change, update.
+#    # Optional
+#    properties:
+#      hibernate: org.hibernate.dialect.PostgreSQLDialect
