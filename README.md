@@ -39,3 +39,5 @@ Expected Response: GRANT
 Grant permissions to the user to be able to login and create tables  
 `ALTER USER moneytransfer WITH LOGIN;`   
 Expected Response: ALTER  
+
+https://code-with-me.jetbrains.com/6vUuhZCo0iVqPLtTuf_uFw#p=IU&fp=629F8212CD968BEA6C4A8B525CB0059699B4152533987920149CDB5E0208654D

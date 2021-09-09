@@ -14,3 +14,23 @@ Content-Type: application/json
 
 ### LIST ALL ACCOUNTS
 GET http://localhost:8080/api/account/list
+
+
+### List All Transfers
+GET http://localhost:8080/api/transfer/list
+
+
+###
+#
+#curl --location --request POST 'https://money-transfer-api-actse.herokuapp.com/api/account/create'
+#--header 'Content-Type: application/json'
+#--data-raw '{
+#    "firstName": "Abebe",
+#    "middleName": "Chala",
+#    "lastName": "Kebede",
+#    "phoneNumber": "+1898882821",
+#    "email": "abebe@gmail.com",
+#    "dateOfBirth": "1997-01-01",
+#    "pin": 4321
+#}'
+

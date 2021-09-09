@@ -47,7 +47,7 @@ public class AccountRepositoryIntegrationTest {
 
         // THEN
         assertThat(savedAccount).isNotNull();
-        assertThat(savedAccount.getId()).isEqualTo(1);
+        assertThat(savedAccount.getId()).isEqualTo(3L);
 
         assertThat(savedAccount.getFirstName()).isEqualTo("John");
         assertThat(savedAccount.getFirstName()).isEqualTo(account.getFirstName());
