@@ -23,15 +23,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class AccountControllerIntegrationTest {
 
     private final String ACCOUNT_ENDPOINT = "/api/account/create";
-
     @Autowired
     private MockMvc mockMvc;
 
-    // Happy path
-
     @Test
     public void shouldCreateAnAccountWithValidInformation() throws Exception {
-
         String payload = "{\n" +
                 "  \"firstName\": \"Jane2\",\n" +
                 "  \"middleName\": \"G.2\",\n" +
@@ -41,7 +37,6 @@ public class AccountControllerIntegrationTest {
                 "  \"dateOfBirth\": \"2000-01-01\",\n" +
                 "  \"pin\": 233222\n" +
                 "}";
-
         mockMvc.perform(
                         post(ACCOUNT_ENDPOINT)
                                 .contentType(MediaType.APPLICATION_JSON)
@@ -49,7 +44,9 @@ public class AccountControllerIntegrationTest {
                 )
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"id\":1,\"firstName\":\"Jane2\",\"middleName\":\"G.2\",\"lastName\":\"Doe2\",\"email\":\"janedoe2@gmail.com\",\"phoneNumber\":\"+1898882822\",\"dateOfBirth\":\"2000-01-01\",\"pin\":233222,\"isVerified\":true,\"balance\":0.0}"))
+                .andExpect(content().json("{\"id\":3,\"firstName\":\"Jane2\",\"middleName\":\"G.2\"," +
+                        "\"lastName\":\"Doe2\",\"email\":\"janedoe2@gmail.com\",\"phoneNumber\":\"+1898882822\"," +
+                        "\"dateOfBirth\":\"2000-01-01\",\"pin\":233222,\"isVerified\":true,\"balance\":0.0}"))
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
     }
 

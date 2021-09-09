@@ -42,4 +42,13 @@ public class AccountService {
     public Iterable<Account> allAccounts() {
         return accountRepository.findAll();
     }
+
+    public Account getAccountById(Long senderId) {
+        return accountRepository.findById(senderId).get();
+    }
+
+    public void updateBalance(Account senderAccount, Double newSenderBalance) {
+        senderAccount.setBalance(newSenderBalance);
+        accountRepository.save(senderAccount);
+    }
 }
