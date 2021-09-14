@@ -21,7 +21,9 @@ public class MoneyTransferApiActseApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("http://localhost:3000", "https://money-transfer-web-app-actse.herokuapp.com");
+						.allowedOrigins("http://localhost:3000",
+								"https://money-transfer-web-app-actse.herokuapp.com",
+								"https://biniama.github.io/money-transfer-web-app-actse/");
 						//.allowedOrigins("*");
 			}
 		};
@@ -32,5 +34,4 @@ public class MoneyTransferApiActseApplication {
 
 	//'AccountRepository' is abstract; cannot be instantiated
 	//AccountRepository accountRepository = new AccountRepository(); // doesn't work
-
 }
