@@ -21,10 +21,10 @@ public class MoneyTransferApiActseApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("http://localhost:3000",
-								"https://money-transfer-web-app-actse.herokuapp.com",
-								"https://biniama.github.io/money-transfer-web-app-actse/");
-						//.allowedOrigins("*");
+//						.allowedOrigins("http://localhost:3000",
+//								"https://money-transfer-web-app-actse.herokuapp.com",
+//								"https://biniama.github.io");
+						.allowedOrigins("*");
 			}
 		};
 	}
